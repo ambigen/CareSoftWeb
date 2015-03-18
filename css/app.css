@@ -791,8 +791,8 @@ body.container {
   text-decoration: none;
 }
 .navbar-brand img {
-  max-height: 20px;
-  margin-top: -4px;
+/*  max-height: 20px;
+  margin-top: -4px;*/
   vertical-align: middle;
 }
 .nav-primary {
