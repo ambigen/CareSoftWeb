@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="css/animate.css" type="text/css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
-  <link rel="stylesheet" href="js/calendar/bootstrap_calendar.css" type="text/css" />
+  <link rel="stylesheet" href="js/fuelux/fuelux.css" type="text/css" />
+<!--  <link rel="stylesheet" href="js/calendar/bootstrap_calendar.css" type="text/css" />-->
+    <link rel="stylesheet" href="js/fullcalendar/fullcalendar.css" type="text/css"  />
+  <link rel="stylesheet" href="js/fullcalendar/theme.css" type="text/css" />
 <link rel="stylesheet" href="js/jvectormap/jquery-jvectormap-1.2.2.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -436,234 +439,60 @@
           </section>
         </aside>
         <!-- /.aside -->
-        <section id="content">
-          <section class="vbox">          
-            <section class="scrollable">
-              <div class="wrapper-lg">
-                <h3 class="m-b-xs font-bold m-t-none">Welcome back, John</h3>
-                <div class="text-muted text-sm"><a href="#" class="text-primary font-bold">25</a> Tasks, <a href="#" class="text-primary font-bold">50</a> Messages</div>
+         <section id="content">
+          <section class="hbox stretch">          
+            <!-- .aside -->
+            <aside>
+              <section class="vbox">
+                <section class="scrollable wrapper">
+                  <section class="panel panel-default">
+                    <header class="panel-heading bg-light clearfix">
+                      <div class="btn-group pull-right" data-toggle="buttons">
+                        <label class="btn btn-sm btn-bg btn-default active" id="monthview">
+                          <input type="radio" name="options">Month
+                        </label>
+                        <label class="btn btn-sm btn-bg btn-default" id="weekview">
+                          <input type="radio" name="options">Week
+                        </label>
+                        <label class="btn btn-sm btn-bg btn-default" id="dayview">
+                          <input type="radio" name="options">Day
+                        </label>
+                      </div>
+                      <span class="m-t-xs inline">
+                        Fullcalendar
+                      </span>
+                    </header>
+                    <div class="calendar" id="calendar">
+
+                    </div>
+                  </section>
+                </section>
+              </section>
+            </aside>
+            <!-- /.aside -->
+            <!-- .aside -->
+            <aside class="aside-lg b-l">
+              <div class="padder">
+                <h5>Dragable events</h5>
+                <div class="line"></div>
+                <div id="myEvents" class="pillbox clearfix m-b no-border no-padder">
+                  <ul>
+                    <li class="label bg-dark">Item One</li>
+                    <li class="label bg-success">Item Two</li>
+                    <li class="label bg-warning">Item Three</li>
+                    <li class="label bg-danger">Item Four</li>
+                    <li class="label bg-info">Item Five</li>
+                    <li class="label bg-primary">Item Six</li>
+                    <input type="text" placeholder="add an event">
+                  </ul>
+                </div>
+                <div class="line"></div>
+                <div class="checkbox">
+                  <label class="checkbox-custom"><input type='checkbox' id='drop-remove' /><i class="fa fa-square-o"></i> remove after drop</label>
+                </div>
               </div>
-            
-             <div class="col-lg-6">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Resident List</h4>
-                    <ul class="list-group alt slim-scroll">
-                      <li class="list-group-item">
-                        <div class="media">
-                          <span class="pull-left thumb-sm"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
-                          <div class="pull-right text-success m-t-sm">
-                            <i class="fa fa-circle"></i>
-                          </div>
-                          <div class="media-body">
-                            <div><a href="#">Chris Fox</a></div>
-                            <small class="text-muted">about 2 minutes ago</small>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="media">
-                          <span class="pull-left thumb-sm"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
-                          <div class="pull-right text-muted m-t-sm">
-                            <i class="fa fa-circle"></i>
-                          </div>
-                          <div class="media-body">
-                            <div><a href="#">Amanda Conlan</a></div>
-                            <small class="text-muted">about 2 hours ago</small>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="media">
-                          <span class="pull-left thumb-sm"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
-                          <div class="pull-right text-warning m-t-sm">
-                            <i class="fa fa-circle"></i>
-                          </div>
-                          <div class="media-body">
-                            <div><a href="#">Dan Doorack</a></div>
-                            <small class="text-muted">3 days ago</small>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="media">
-                          <span class="pull-left thumb-sm"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
-                          <div class="pull-right text-danger m-t-sm">
-                            <i class="fa fa-circle"></i>
-                          </div>
-                          <div class="media-body">
-                            <div><a href="#">Lauren Taylor</a></div>
-                            <small class="text-muted">about 2 minutes ago</small>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="media">
-                          <span class="pull-left thumb-sm"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
-                          <div class="pull-right text-danger m-t-sm">
-                            <i class="fa fa-circle"></i>
-                          </div>
-                          <div class="media-body">
-                            <div><a href="#">Lauren Taylor</a></div>
-                            <small class="text-muted">about 2 minutes ago</small>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="media">
-                          <span class="pull-left thumb-sm"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
-                          <div class="pull-right text-danger m-t-sm">
-                            <i class="fa fa-circle"></i>
-                          </div>
-                          <div class="media-body">
-                            <div><a href="#">Lauren Taylor</a></div>
-                            <small class="text-muted">about 2 minutes ago</small>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="media">
-                          <span class="pull-left thumb-sm"><img src="images/avatar.jpg" alt="John said" class="img-circle"></span>
-                          <div class="pull-right text-danger m-t-sm">
-                            <i class="fa fa-circle"></i>
-                          </div>
-                          <div class="media-body">
-                            <div><a href="#">Lauren Taylor</a></div>
-                            <small class="text-muted">about 2 minutes ago</small>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                    
-                    </div>
-                  </section>
-             </div>
-             
-             <div class="col-lg-6">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Enquiries</h4>
-                    <section class="panel-body slim-scroll" data-height="230px">
-                      <article class="media">
-                        <span class="pull-left thumb-sm"><img src="images/avatar_default.jpg" class="img-circle"></span>
-                        <div class="media-body">
-                          <div class="pull-right media-xs text-center text-muted">
-                            <strong class="h4">12:18</strong><br>
-                            <small class="label bg-light">pm</small>
-                          </div>
-                          <a href="#" class="h4">Bootstrap 3 released</a>
-                          <small class="block"><a href="#" class="">John Smith</a> <span class="label label-success">Circle</span></small>
-                          <small class="block m-t-sm">Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</small>
-                        </div>
-                      </article>
-                      <div class="line pull-in"></div>
-                      <article class="media">
-                        <span class="pull-left thumb-sm"><i class="fa fa-file-o fa-3x icon-muted"></i></span>                
-                        <div class="media-body">
-                          <div class="pull-right media-xs text-center text-muted">
-                            <strong class="h4">17</strong><br>
-                            <small class="label bg-light">feb</small>
-                          </div>
-                          <a href="#" class="h4">Bootstrap documents</a>
-                          <small class="block"><a href="#" class="">John Smith</a> <span class="label label-info">Friends</span></small>
-                          <small class="block m-t-sm">There are a few easy ways to quickly get started with Bootstrap, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</small>
-                        </div>
-                      </article>
-                      <div class="line pull-in"></div>
-                      <article class="media">
-                        <div class="media-body">
-                          <div class="pull-right media-xs text-center text-muted">
-                            <strong class="h4">09</strong><br>
-                            <small class="label bg-light">jan</small>
-                          </div>
-                          <a href="#" class="h4 text-success">Mobile first html/css framework</a>
-                          <small class="block m-t-sm">Bootstrap, Ratchet</small>
-                        </div>
-                      </article>
-                    </section>
-                    
-                    </div>
-                  </section>
-             </div>
-             <br  clear="all" >
-             <div class="col-lg-3">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Watch Scroll</h4>
-                    casdfasdf</div>
-                  </section>
-             </div>
-             
-             <div class="col-lg-3">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Alerts</h4>
-                       <div class="alert alert-warning alert-block">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <h4><i class="fa fa-bell-alt"></i>Warning!</h4>
-                    <p>Best check yo self, you're not looking too good...</p>
-                  </div>
-                  <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <i class="fa fa-ban-circle"></i><strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
-                  </div>
-                  <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <i class="fa fa-ok-sign"></i><strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
-                  </div>
-                    
-                    </div>
-                  </section>
-             </div>
-             
-             <div class="col-lg-3">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Todays Shift</h4>
-                    casdfasdf</div>
-                  </section>
-             </div>
-             
-             <div class="col-lg-3">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Appointments</h4>
-                    casdfasdf</div>
-                  </section>
-             </div>
-             
-             <div class="col-lg-3">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Search</h4>
-                    
-                     <form role="form">
-                        <div class="form-group">
-                          <label>Search</label>
-                          <input type="email" class="form-control" placeholder="Enter email">
-                         
-                        </div> <button type="submit" class="btn btn-success">Sign in</button>
-                        </form>
-                    
-                    </div>
-                  </section>
-             </div>
-             
-             <div class="col-lg-3">
-                  <section class="panel panel-default">
-                   <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Colleagues</h4>
-                    casdfasdf</div>
-                  </section>
-             </div>
-                
-                
-          
-           
-              
-              
-              
-            </section>
+            </aside>
+            <!-- /.aside -->
           </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen, open" data-target="#nav,html"></a>
         </section>
@@ -687,8 +516,12 @@
   <script src="js/charts/flot/jquery.flot.grow.js"></script>
   <script src="js/charts/flot/demo.js"></script>
 
-  <script src="js/calendar/bootstrap_calendar.js"></script>
-  <script src="js/calendar/demo.js"></script>
+<!-- fullcalendar -->
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/fullcalendar/fullcalendar.min.js"></script>
+<script src="js/fullcalendar/demo.js"></script>
+  <script src="js/app.plugin.js"></script>
 
   <script src="js/sortable/jquery.sortable.js"></script>
 
