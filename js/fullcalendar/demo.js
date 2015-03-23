@@ -58,6 +58,16 @@
             
           }
         ,
+		
+		eventClick: function(calEvent, jsEvent, view)
+        {
+            var r=confirm("Delete " + calEvent.title);
+            if (r===true)
+              {
+                  $('#calendar').fullCalendar('removeEvents', calEvent._id);
+              }
+        },
+		
         events: [
           {
             title: 'All Day Event',
@@ -130,4 +140,11 @@
 
 
   });
+  
+  
+   // $("#delete").click(function(){
+//        calendar.fullCalendar( 'removeEventSource', gHref )
+//    });
+	
+	
 }(window.jQuery);

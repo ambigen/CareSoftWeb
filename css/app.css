@@ -3146,9 +3146,11 @@ fieldset[disabled] .btn-gplus.active {
   display: inline-block;
 }
 .thumb-lg {
-  width: 128px;
+  width: 211px;
   display: inline-block;
+  margin-bottom:10px;
 }
+
 .thumb-md {
   width: 90px;
   display: inline-block;
@@ -3260,3 +3262,29 @@ fieldset[disabled] .btn-gplus.active {
     padding: 15px;
   }
 }
+
+
+.no-padding-top{padding-top: 0px!important;}
+.no-padding-right{padding-right: 0px!important;}
+.no-padding-bottom{padding-bottom: 0px!important;}
+.no-padding-left{padding-left: 0px!important;}
+
+.no-margin-top{margin-top: 0px!important;}
+.no-margin-right{margin-right: 0px!important;}
+.no-margin-bottom{margin-bottom: 0px!important;}
+.no-margin-left{margin-left: 0px!important;}
+
+.w-10{ width:10%;}
+.w-20{ width:20%;}
+.w-30{ width:30%;}
+.w-40{ width:40%;}
+.w-50{ width:50%;}
+.w-60{ width:60%;}
+.w-70{ width:70%;}
+.w-80{ width:80%;}
+.w-90{ width:90%;}
+.w-100{ width:100%;}
+
+
+.close-event{font-size:20px;}
+.fc-event-inner:after{ content:"x"; text-align:right; float:right;}
