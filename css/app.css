@@ -3288,3 +3288,6 @@ fieldset[disabled] .btn-gplus.active {
 
 .close-event{font-size:20px;}
 .fc-event-inner:after{ content:"x"; text-align:right; float:right;}
+.new-enq-tab{background-color: #060; color:#fff!important;}
+a.new-enq-tab:hover{background-color: #09C!important;}
+.newenq.active a{background-color: #09C!important;}
