@@ -1311,7 +1311,7 @@
          timeslotsPerHour : 4,
          buttons : true,
          buttonText : {
-            today : "today",
+            today : "Today",
             lastWeek : "&nbsp;&lt;&nbsp;",
             nextWeek : "&nbsp;&gt;&nbsp;"
          },

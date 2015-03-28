@@ -2,12 +2,14 @@
 /* CSS Document */
 
 
-
+#calendar { margin-top:-65px;}
+#event_edit_container { padding:20px!important; padding-bottom:0px!important;}
 #event_edit_container ul { margin-left:0px; padding-left:10px;}
-#event_edit_container ul li { font-size: 11px; color:#666; list-style:none; line-height:30px;}
-#event_edit_container ul li label { width:100px;}
+#event_edit_container ul li { font-size: 13px; color:#666; list-style:none; line-height:30px;}
+#event_edit_container ul li label { width:120px;}
 
-.xpad{ padding:3px!important; line-height: normal!important; }
+.xpad{ padding:5px!important; line-height: normal!important; }
+.
 .calendar{ display:none;}
 
 .wc-container {

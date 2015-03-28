@@ -19,7 +19,7 @@ $(document).ready(function()
 			which indicate 30 minutes,
 			between each hours
 		*/
-		timeslotsPerHour : 6,
+		timeslotsPerHour : 4,
 		/*
 			[boolean | default: false]
 			Whether the calendar will allow events to overlap.
@@ -45,7 +45,7 @@ $(document).ready(function()
 			{start: 8, end: 18, limitDisplay: false}]
 			An object that specifies which hours within the day to render as
 		*/
-		businessHours :{start: 7, end: 18, limitDisplay: true },
+		businessHours :{start: 00, end: 24, limitDisplay: false },
 		
 		/*
 			[integer | default: 7]
