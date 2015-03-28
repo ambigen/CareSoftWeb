@@ -881,8 +881,13 @@ th {
 
 
 
-
-
+* {
+     -moz-box-sizing: border-box;
+}
+*:before,
+*:after {
+     -moz-box-sizing: border-box;
+}
 
 
 
