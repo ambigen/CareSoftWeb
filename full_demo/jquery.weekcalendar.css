@@ -11,8 +11,8 @@
 .calendar{ display:none;}
 
 .wc-container {
-	font-size: 14px;	
-	font-family: arial, helvetica;
+	font-size: 12px;	
+	/*font-family: arial, helvetica;*/
 }
 
 .wc-nav {
@@ -24,7 +24,7 @@
 	margin: 0 0.5em;	
 }
 .wc-header td {
-    background: url("http://jquery-week-calendar.googlecode.com/svn/trunk/jquery.weekcalendar/full_demo/images/header-bg.png") repeat-x scroll 0 0 transparent;
+    background: #CCC /*url("http://jquery-week-calendar.googlecode.com/svn/trunk/jquery.weekcalendar/full_demo/images/header-bg.png") repeat-x scroll 0 0 transparent*/;
 }
 .wc-container table {
 	border-collapse: collapse;
@@ -37,7 +37,7 @@
 
 .wc-header {
 	background: #eee;
-	border-top: 1px solid #aaa;
+	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #aaa;
 	width: 100%;
 }
@@ -55,12 +55,15 @@
 	padding: 0.4em;
 }
 .wc-header td {
-	background-color: #eee;	
+	background-color: #083A38;	
+	color:#fff;
 }
 
 .wc-grid-timeslot-header {
 	width: 6%;
-	background: #eee;	
+	background: #eee;
+	
+	/vertical-align: bottom;*height:70px!important;*/
 }
 
 
