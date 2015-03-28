@@ -125,7 +125,7 @@ $(document).ready(function()
 				},
 				buttons:
 				{
-					save : function()
+					Save : function()
 					{
 						calEvent.id = id;
 						id++;
@@ -138,7 +138,7 @@ $(document).ready(function()
 						$calendar.weekCalendar("updateEvent", calEvent);
 						$dialogContent.dialog("close");
 					},
-					cancel : function()
+					Cancel : function()
 					{
 						$dialogContent.dialog("close");
 					}
@@ -180,7 +180,7 @@ $(document).ready(function()
 				},
 				buttons:
 				{
-					save : function()
+					Save : function()
 					{
 						calEvent.start = new Date(startField.val());
 						calEvent.end = new Date(endField.val());
@@ -190,12 +190,12 @@ $(document).ready(function()
 						$calendar.weekCalendar("updateEvent", calEvent);
 						$dialogContent.dialog("close");
 					},
-					"delete" : function()
+					"Delete" : function()
 					{
 						$calendar.weekCalendar("removeEvent", calEvent.id);
 						$dialogContent.dialog("close");
 					},
-					cancel : function()
+					Cancel : function()
 					{
 						$dialogContent.dialog("close");
 					}

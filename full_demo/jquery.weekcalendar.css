@@ -1,6 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+
+#event_edit_container ul { margin-left:0px; padding-left:10px;}
+#event_edit_container ul li { font-size: 11px; color:#666; list-style:none; line-height:30px;}
+#event_edit_container ul li label { width:100px;}
+
+.xpad{ padding:3px!important; line-height: normal!important; }
 .calendar{ display:none;}
 
 .wc-container {
