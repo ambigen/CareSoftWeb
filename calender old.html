@@ -5,31 +5,19 @@
   <title>Notebook | Web Application</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
-  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+ <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
   <link rel="stylesheet" href="css/animate.css" type="text/css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
-
-<link rel="stylesheet" href="js/jvectormap/jquery-jvectormap-1.2.2.css" type="text/css" />
+    <link rel="stylesheet" href="js/fuelux/fuelux.css" type="text/css" />
+  <link rel="stylesheet" href="js/fullcalendar/fullcalendar.css" type="text/css"  />
+  <link rel="stylesheet" href="js/fullcalendar/theme.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
     <script src="js/ie/excanvas.js"></script>
   <![endif]-->
-  
-  <link rel='stylesheet' type='text/css' href='css/jquery-ui.css' />
-  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
-  
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js'></script>
-
-  <script type='text/javascript' src='full_demo/jquery.weekcalendar.js'></script>
-
-	<script type='text/javascript' src="full_demo/demo.js"></script>
-
-    <link rel='stylesheet' type='text/css' href='full_demo/jquery.weekcalendar.css' />
-	<link rel='stylesheet' type='text/css' href='full_demo/full_demo/demo.css'/>
-
 </head>
 <body class="">
   <section class="vbox">
@@ -189,7 +177,7 @@
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu text-left">
-                     <li><a href="#">Care Home 1</a></li>
+                    <li><a href="#">Care Home 1</a></li>
                     <li><a href="#">Care Home 2</a></li>
                     <li><a href="#">Caer Home 3</a></li>
                   </ul>
@@ -449,62 +437,69 @@
           </section>
         </aside>
         <!-- /.aside -->
-        <section id="content">
-          <section class="vbox">          
-            <section class="scrollable">
-              <div class="wrapper-lg">
-                <h3 class="m-b-xs font-bold m-t-none">Welcome back, John</h3>
-                <div class="text-muted text-sm"><a href="#" class="text-primary font-bold">25</a> Tasks, <a href="#" class="text-primary font-bold">50</a> Messages</div>
+         <section id="content">
+          <section class="hbox stretch">          
+            <!-- .aside -->
+            <aside>
+              <section class="vbox">
+                <section class="scrollable wrapper">
+                  <section class="panel panel-default">
+                    <header class="panel-heading bg-light clearfix">
+                      <div class="btn-group pull-right" data-toggle="buttons">
+                        <label class="btn btn-sm btn-bg btn-default active" id="monthview">
+                          <input type="radio" name="options">Month
+                        </label>
+                        <label class="btn btn-sm btn-bg btn-default" id="weekview">
+                          <input type="radio" name="options">Week
+                        </label>
+                        <label class="btn btn-sm btn-bg btn-default" id="dayview">
+                          <input type="radio" name="options">Day
+                        </label>
+                      </div>
+                      <span class="m-t-xs inline">
+                        Fullcalendar
+                      </span>
+                    </header>
+                    <div class="calendar" id="calendar">
+
+                    </div>
+                  </section>
+                </section>
+              </section>
+            </aside>
+            <!-- /.aside -->
+            <!-- .aside -->
+            <aside class="aside-lg b-l">
+              <div class="padder">
+                <h5>Dragable events</h5>
+                
+               <!-- 
+               <p><a href="#modal" data-toggle="modal">df</a></p>
+               <button id="delete">Delete Event</button>-->
+                <div class="line"></div>
+                <div id="myEvents" class="pillbox clearfix m-b no-border no-padder">
+                  <ul>
+                    <li class="label bg-dark"><a href="#modal" data-toggle="modal">Item One</a></li>
+                    <li class="label bg-success">Item Two</li>
+                    <li class="label bg-warning">Item Three</li>
+                    <li class="label bg-danger">Item Four</li>
+                    <li class="label bg-info">Item Five</li>
+                    <li class="label bg-primary">Item Six</li>
+                   <div class="clearfix">&nbsp;</div>
+
+
+                    <input type="text" placeholder="add an event">
+                    
+                
+                  </ul>
+                </div>
+                <div class="line"></div>
+                <div class="checkbox">
+                  <label class="checkbox-custom"><input type='checkbox' id='drop-remove' /><i class="fa fa-square-o"></i> remove after drop</label>
+                </div>
               </div>
-            
-             
-            
-             <div id='calendar'></div>
-	
-	<!--
-		pop-up container,
-		which will be shown when timeslot select
-	-->
-	<div id="event_edit_container" style="display:none;">
-		<form>
-			<input type="hidden" />
-			<ul>
-				<li>
-					<span>Date: </span><span class="date_holder"></span> 
-				</li>
-				<li>
-					<label for="start">Start Time: </label><select name="start"><option value="">Select Start Time</option></select>
-				</li>
-				<li>
-					<label for="end">End Time: </label><select name="end"><option value="">Select End Time</option></select>
-				</li>
-				<li>
-					<label for="title">Title: </label><input type="text" name="title" />
-				</li>
-				<li>
-					<label for="body">Body: </label><textarea name="body"></textarea>
-				</li>
-			</ul>
-		</form>
-	</div>
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-                
-                
-          
-           
-              
-              
-              
-            </section>
+            </aside>
+            <!-- /.aside -->
           </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen, open" data-target="#nav,html"></a>
         </section>
@@ -514,31 +509,100 @@
       </section>
     </section>
   </section>
-<script src="js/jquery.min.js"></script>
-<script>
-$.noConflict();
-</script>
+  
+  <div class="modal fade" id="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Idrawfast 02/2013</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a table in a modal, click the trash icon to remove the item</p>
+          <section class="panel panel-default m-l-n-md  m-r-n-md m-b-none">
+            <header class="panel-heading">
+              <span class="label bg-danger pull-right">4 left</span>
+              Tasks
+            </header>
+            <table class="table table-striped m-b-none text-sm">
+              <thead>
+                <tr>
+                  <th>Progress</th>
+                  <th>Item</th>                    
+                  <th width="20"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="item-1">
+                  <td>
+                    <div class="progress progress-sm progress-striped active m-t-xs m-b-none">
+                      <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="80%" style="width: 80%"></div>
+                    </div>
+                  </td>
+                  <td>App prototype design</td>
+                  <td class="text-right">
+                    <a href="#item-1" data-dismiss="alert"><i class="fa fa-trash-o"></i></a>
+                  </td>
+                </tr>
+                <tr id="item-2">
+                  <td>
+                    <div class="progress progress-xs m-t-xs m-b-none">
+                      <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-original-title="40%" style="width: 40%"></div>
+                    </div>
+                  </td>
+                  <td>Design documents</td>
+                  <td class="text-right">
+                     <a href="#item-2" data-dismiss="alert"><i class="fa fa-trash-o"></i></a>
+                  </td>
+                </tr>
+                <tr id="item-3">                    
+                  <td>
+                    <div class="progress progress-xs m-t-xs m-b-none">
+                      <div class="progress-bar progress-bar-warning" data-toggle="tooltip" data-original-title="20%" style="width: 20%"></div>
+                    </div>
+                  </td>
+                  <td>UI toolkit</td>
+                  <td class="text-right">
+                     <a href="#item-3" data-dismiss="alert"><i class="fa fa-trash-o"></i></a>
+                  </td>
+                </tr>
+                <tr id="item-4">                    
+                  <td>
+                    <div class="progress progress-xs m-t-xs m-b-none">
+                      <div class="progress-bar progress-bar-danger" data-toggle="tooltip" data-original-title="15%" style="width: 15%"></div>
+                    </div>
+                  </td>
+                  <td>Testing</td>
+                  <td class="text-right">
+                     <a href="#item-4" data-dismiss="alert"><i class="fa fa-trash-o"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-info" data-loading-text="Updating...">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+   <script src="js/jquery.min.js"></script>
   <!-- Bootstrap -->
   <script src="js/bootstrap.js"></script>
   <!-- App -->
   <script src="js/app.js"></script> 
   <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
-  <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
-  <script src="js/charts/flot/jquery.flot.min.js"></script>
-  <script src="js/charts/flot/jquery.flot.tooltip.min.js"></script>
-  <script src="js/charts/flot/jquery.flot.resize.js"></script>
-  <script src="js/charts/flot/jquery.flot.grow.js"></script>
-  <script src="js/charts/flot/demo.js"></script>
-
-  <script src="js/calendar/bootstrap_calendar.js"></script>
-  <script src="js/calendar/demo.js"></script>
-
-  <script src="js/sortable/jquery.sortable.js"></script>
-
-  <script src="js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-  <script src="js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-  <script src="js/jvectormap/demo.js"></script>
+  <!-- fuelux -->
+<script src="js/fuelux/fuelux.js"></script>
+<!-- fullcalendar -->
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/fullcalendar/fullcalendar.min.js"></script>
+<script src="js/fullcalendar/demo.js"></script>
   <script src="js/app.plugin.js"></script>
+  
+  
 </body>
 </html>
