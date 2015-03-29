@@ -73,9 +73,9 @@ $(document).ready(function()
 		{
 			if (calEvent.end.getTime() < new Date().getTime())
 			{
-				$event.css("backgroundColor", "#aaa");
+				$event.css("backgroundColor", "lightSeaGreen");
 				$event.find(".wc-time").css({
-					"backgroundColor" : "#999",
+					"backgroundColor" : "#222",
 					"border" : "1px solid #888"
 				});
 			}
