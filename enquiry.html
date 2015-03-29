@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/animate.css" type="text/css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
-  
+  <link rel="stylesheet" href="js/datepicker/datepicker.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
@@ -427,8 +427,9 @@
                 <i class="fa fa-angle-right text-active"></i>
               </a>
               <div class="btn-group hidden-nav-xs">
-                <button type="button" title="Chats" class="btn btn-icon btn-sm btn-default" data-toggle="dropdown" data-target="#chat"><i class="fa fa-comment-o"></i></button>
-                <button type="button" title="Contacts" class="btn btn-icon btn-sm btn-default" data-toggle="dropdown" data-target="#invite"><i class="fa fa-facebook"></i></button>
+              Developed by <strong>ambinet</strong>
+                <!--<button type="button" title="Chats" class="btn btn-icon btn-sm btn-light" data-toggle="dropdown" data-target="#chat"><i class="fa fa-comment-o"></i></button>
+                <button type="button" title="Contacts" class="btn btn-icon btn-sm btn-light" data-toggle="dropdown" data-target="#invite"><i class="fa fa-facebook"></i></button>-->
               </div>
             </footer>
           </section>
@@ -436,39 +437,25 @@
         <!-- /.aside -->
         <section id="content">
           <section class="vbox">
-            <header class="header bg-white b-b b-light">
+            <!--<header class="header bg-white b-b b-light">
               <p><strong>Enquiry</strong> Some descriptive text will go here.</p>
-            </header>
+            </header>-->
+            
             <section class="scrollable">
               <section class="hbox stretch">
+                 
+               <aside class="bg-white">
+                  <section class=" slim-scrollable">
+                   <div class="wrapper-lg">
+                <h3 class="m-b-xs font-bold m-t-none">Welcome back, John</h3>
+                <div class="text-muted text-sm"><a href="#" class="text-primary font-bold">05</a> Accepted, <a href="#" class="text-primary font-bold">10</a> Waiting, <a href="#" class="text-primary font-bold">05</a> Rejected</div>
+                <br>
+<br>
+
+                <h4 class="m-t-none">Make a New Enquiry</h4>
                 
-                <aside class="bg-white">
-                  <section class="vbox">
-                    <header class="header bg-light bg-gradient">
-                      <ul class="nav nav-tabs nav-white">
-                        <li class="active"><a href="#pi" data-toggle="tab">New Enquiry</a></li>
-                        <li class=""><a href="#ci" data-toggle="tab">Contact Information</a></li>
-                        <li class=""><a href="#nki" data-toggle="tab">Next to Kin Information</a></li>
-                        
-                      </ul>
-                    </header>
-                    <section class="scrollable">
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="pi">
-                        
-                     <div class="panel-body">
-                    <h4 class="m-t-none font-bold">Make a New Enquiry</h4>
-<div class="panel-body slim-scroll" data-height="530px">
-                      <form role="form">
-                        <div class="form-group w-50">
-                         
-                          <input type="text" class="form-control" placeholder="Care Home ID">
-                        </div>
-                        <div class="form-group w-50">
-                        
-                          <input type="text" class="form-control" placeholder="Enquiry ID">
-                        </div>
-                        
+                 <form role="form">
+                                                
                         <div class="form-group w-50">
                         
                          <select name="account" class="form-control m-b">
@@ -486,7 +473,7 @@
                         
                           <input class="input-sm input-s datepicker-input form-control" size="16" type="text" value="Date of Enquiry" data-date-format="dd-mm-yyyy" >
                         </div>
-                        <div class="form-group w-70">
+                        <div class="form-group w-40">
                         
                          <select name="account" class="form-control m-b">
                           <option>Select enquiry mode</option>
@@ -496,44 +483,35 @@
                           <option>Referral</option>
                         </select>
                         </div>
-                        <div class="form-group w-80">
+                        <div class="form-group w-60">
                         
                           <input type="text" class="form-control" placeholder="First Name">
                         </div>
-                        <div class="form-group w-80">
+                        <div class="form-group w-60">
                         
                           <input type="text" class="form-control" placeholder="Surname">
                         </div>
-                        <div class="form-group w-60">
+                        <div class="form-group w-50">
                         
                           <input type="text" class="form-control" placeholder="Telephone Number">
                         </div>
-                        <div class="form-group w-60">
+                        <div class="form-group w-50">
                         
                           <input type="text" class="form-control" placeholder="Mobile Number">
                         </div>
-                        <div class="form-group w-80">
+                        <div class="form-group w-50">
                         
                           <input type="email" class="form-control" placeholder="Email Address">
                         </div>
-                       <div class="form-group w-50">
-                        
-                         <select name="account" class="form-control m-b">
-                          <option>Religon</option>
-                          <option>Muslim</option>
-                          <option>Sikh</option>
-                          <option>Hindu</option>
-                          <option>Christian</option>
-                          <option>Jew</option>
-                          <option>Budhist</option>
-                          <option>Other</option>
-                        </select>
-                        </div>
+                       
                         <div class="form-group w-60">
                         
                           <input type="text" class="form-control" placeholder="Enquiry Taken By">
                         </div>
-                        <div class="form-group w-90">
+                       <div class="form-group w-60">
+                         <textarea rows="10" class="form-control" placeholder="Notes"></textarea>
+                        </div> 
+                       <div class="form-group w-90">
                         
                           <div class="radio">Enquiry Status: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <label>
@@ -551,69 +529,7 @@
                           </label>
                           </div>
                         </div>
-                        <div class="form-group">
-                        
-                        
-                        <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
-                          <div class="btn-group">
-                            <a class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
-                              <ul class="dropdown-menu">
-                              </ul>
-                          </div>
-                          <div class="btn-group">
-                            <a class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
-                              <ul class="dropdown-menu">
-                              <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
-                              <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
-                              <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
-                              </ul>
-                          </div>
-                          <div class="btn-group">
-                            <a class="btn btn-default btn-sm" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
-                          </div>
-                          <div class="btn-group">
-                            <a class="btn btn-default btn-sm" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
-                          </div>
-                          <div class="btn-group">
-                            <a class="btn btn-default btn-sm" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
-                          </div>
-                          <div class="btn-group">
-                          <a class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
-                            <div class="dropdown-menu">
-                              <div class="input-group m-l-xs m-r-xs">
-                                <input class="form-control input-sm" placeholder="URL" type="text" data-edit="createLink"/>
-                                <div class="input-group-btn">
-                                  <button class="btn btn-default btn-sm" type="button">Add</button>
-                                </div>
-                              </div>
-                            </div>
-                            <a class="btn btn-default btn-sm" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
-                          </div>
-                          
-                          <div class="btn-group">
-                            <a class="btn btn-default btn-sm" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
-                            <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
-                          </div>
-                          <div class="btn-group">
-                            <a class="btn btn-default btn-sm" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
-                            <a class="btn btn-default btn-sm" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
-                          </div>
-                        </div>
-                        <div id="editor" class="form-control" style="overflow:scroll;height:100px;max-height:100px">
-                          Notes...
-                        </div>
-                      
-                        </div>
-                          <div class="form-group w-70">
+                          <div class="form-group w-50">
                         
                          <select name="account" class="form-control m-b">
                           <option>How did you find us</option>
@@ -626,92 +542,35 @@
                         </div>
                           <button type="submit" class="btn btn-primary">Save Enquiry</button>
                       </form>
-                    </div>
-                    
-                    </div>
-                    
-                    
-                        </div>
-                        <div class="tab-pane" id="ci">
-                         <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
-                            <li class="list-group-item">
-                  <p>Address of Patient</p>
-                                <h4 class="block">34 Cliveland Street Birmingham B19 3SH, United Kingdom</h4>
-
-                            </li>
-                            
-                            
-                            <li class="list-group-item">
-                               <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="50%"><p>Telephone Number</p>
-                                <h4 class="block">07844 4545 412</h4></td>
-    <td width="50%"><p>Mobile Number</p>
-                                <h4 class="block">01214 5457 544</h4></td>
-                                
-  </tr>
-</table>
-                            </li>
-                            
-                             <li class="list-group-item">
-                              <p>Email Address</p>
-                                <h4 class="block">chris.fox@gmail.com</h4>
-                            </li>
-
-                         
-
-                          </ul>
-                        </div>
-                        <div class="tab-pane" id="nki">
-                         <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
-                           <li class="list-group-item">
-                               <table width="100%" border="0" cellspacing="0" cellpadding="0"> <td width="50%"><p>Name</p>
-                                <h4 class="block">Jhon Elvis Fox</h4></td>
-                                <td width="50%"><p>Relation</p>
-                                <h4 class="block">Son</h4></td>
-                            </tr>
-</table>
-                            </li>
-                            <li class="list-group-item">
-                  <p>Address</p>
-                                <h4 class="block">34 Cliveland Street Birmingham B19 3SH, United Kingdom</h4>
-
-                            </li>
-                            
-                            
-                            <li class="list-group-item">
-                               <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="50%"><p>Telephone Number</p>
-                                <h4 class="block">07844 4545 412</h4></td>
-    <td width="50%"><p>Mobile Number</p>
-                                <h4 class="block">01214 5457 544</h4></td>
-                                
-  </tr>
-</table>
-                            </li>
-                            
-                             <li class="list-group-item">
-                              <p>Email Address</p>
-                                <h4 class="block">elvis.fox@gmail.com</h4>
-                            </li>
-
+              </div>
                       
-
-                          </ul>
-                        </div>
-                      </div>
                     </section>
-                  </section>
                 </aside>
+                
                 <aside class="col-lg-4 b-l">
                   <section class="vbox">
                     <section class="scrollable">
                       <div class="wrapper">
                       <h4 class="m-t-none font-bold">Previous Enquiries</h4>
+                      
+                      <div class="form-group">
+                        
+                         <select name="account" class="form-control m-b">
+                          <option>Filter enquiry types...</option>
+                          <option>View All</option>
+                          <option>New Admission</option>
+                          <option>Maintenance</option>
+                          <option>Medial</option>
+                          <option>Surgery</option>
+                          <option>Hospital</option>
+                          <option>Family</option>
+                          <option>General</option>
+                        </select>
+                        </div>
                       <div class="panel-body" style="background-color:#fff;">
                     
-                    <section class="panel-body slim-scroll" data-height="530px">
+                    <section class="panel-body slim-scroll" data-height="930px">
+                    
                       <article class="media">
                         
                         <div class="media-body">
@@ -802,7 +661,10 @@
   <!-- App -->
   <script src="js/app.js"></script> 
   <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-  
+<!-- datepicker -->
+<script src="js/datepicker/bootstrap-datepicker.js"></script>
+
+
   <script src="js/app.plugin.js"></script>
 </body>
 </html>

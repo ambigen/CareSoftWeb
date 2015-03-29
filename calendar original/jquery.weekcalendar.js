@@ -277,11 +277,10 @@
 
          if (options.buttons) {
             calendarNavHtml = "<div class=\"wc-nav\">\
-					<button class=\"wc-today btn btn-success\">" + options.buttonText.today + "</button>\
-                    <button class=\"wc-prev btn btn-info\">" + options.buttonText.lastWeek + "</button>\
-                    <button class=\"wc-next btn btn-info\">" + options.buttonText.nextWeek + "</button>\
-                    <button class=\"wc-today btn btn-alert\">" + "Print" + "</button>\
-					</div>";
+                    <button class=\"wc-today\">" + options.buttonText.today + "</button>\
+                    <button class=\"wc-prev\">" + options.buttonText.lastWeek + "</button>\
+                    <button class=\"wc-next\">" + options.buttonText.nextWeek + "</button>\
+                    </div>";
 
             $(calendarNavHtml).appendTo($calendarContainer);
 
@@ -1312,7 +1311,7 @@
          timeslotsPerHour : 4,
          buttons : true,
          buttonText : {
-            today : "Today",
+            today : "today",
             lastWeek : "&nbsp;&lt;&nbsp;",
             nextWeek : "&nbsp;&gt;&nbsp;"
          },
@@ -1355,8 +1354,7 @@
          shortMonths : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
          longMonths : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
          shortDays : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-         longDays : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-		 //['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+         longDays : ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
       }
    });
 

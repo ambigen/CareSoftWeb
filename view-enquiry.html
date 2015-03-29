@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/animate.css" type="text/css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
-  
+  <link rel="stylesheet" href="js/datepicker/datepicker.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
@@ -436,16 +436,15 @@
         <!-- /.aside -->
         <section id="content">
           <section class="vbox">
-<header class="header bg-white b-b b-light">
-                 <strong>Enquiry Details</strong>   <!-- <a href="enquiry.html" class="btn btn-success btn-sm pull-right"><i class="fa fa-plus"></i> Add New Enquiry</a>-->
-                    </header>
-            <section class="scrollable">
-            
+
+            <section class="scrollable ">
+             
               <section class="hbox stretch">
                 <aside class="aside-lg bg-light lter b-r">
                   <section class="vbox">
                     <section class="scrollable">
                       <div class="wrapper">
+                     
                         <div class="clearfix m-b">
                         
                           <div class="clear">
@@ -480,17 +479,8 @@
                           
                         </div>
                         <div>
-                        <div class="line"></div>
+                     
                         
-                          <h4>Important Links</h4>
-                         
-                         <p><a href="profile.html" class="btn btn-info w-100">Patient Profile</a></p>
-                      <p><a href="#" class="btn btn-info w-100">Alloted Room</a></p>
-                      <p><a href="#" class="btn btn-info w-100">Doctor's Details</a></p>
-                      <p><a href="#" class="btn btn-info w-100">Medical History</a></p>
-                      <p><a href="#" class="btn btn-info w-100">Reports</a></p>
-                         
-                         
                         </div>
                       </div>
                     </section>
@@ -501,8 +491,8 @@
                     <header class="header bg-light bg-gradient">
                       <ul class="nav nav-tabs nav-white">
                         <li class="active"><a href="#pi" data-toggle="tab">Enquiry Information</a></li>
-                        <li class=""><a href="#ci" data-toggle="tab">Contact Information</a></li>
-                        <li class=""><a href="#nki" data-toggle="tab">Another Tab</a></li>
+                        <li class=""><a href="#ci" data-toggle="tab">Edit / Update Enquiry</a></li>
+                        <li class=""><a href="#nki" data-toggle="tab">Enquiry Archives</a></li>
                         <li class="newenq" style="float:right;"><a href="enquiry.html"  class="new-enq-tab"><i class="fa fa-plus"></i> New Enquiry</a></li>
                       </ul>
                     </header>
@@ -515,6 +505,10 @@
                                               
 
                           <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                          <li class="list-group-item">
+                              <h3>Personal Information</h3>
+                              
+                            </li>
                             <li class="list-group-item">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
@@ -583,12 +577,12 @@
                             </tr>
 </table>
                             </li>
+<li class="list-group-item">
+                              <h3>Contact Information</h3>
+                              
+                            </li>
 
-                          </ul>
-                        </div>
-                        <div class="tab-pane" id="ci">
-                         <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
-                            <li class="list-group-item">
+                      <li class="list-group-item">
                   <p>Address of Patient</p>
                                 <h4 class="block">34 Cliveland Street Birmingham B19 3SH, United Kingdom</h4>
 
@@ -611,14 +605,12 @@
                               <p>Email Address</p>
                                 <h4 class="block">chris.fox@gmail.com</h4>
                             </li>
-
-                         
-
-                          </ul>
-                        </div>
-                        <div class="tab-pane" id="nki">
-                         <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
-                           <li class="list-group-item">
+                            
+                            <li class="list-group-item">
+                              <h3>Next to Kin Information</h3>
+                              
+                            </li>
+                            <li class="list-group-item">
                                <table width="100%" border="0" cellspacing="0" cellpadding="0"> <td width="50%"><p>Name</p>
                                 <h4 class="block">Jhon Elvis Fox</h4></td>
                                 <td width="50%"><p>Relation</p>
@@ -649,10 +641,173 @@
                               <p>Email Address</p>
                                 <h4 class="block">elvis.fox@gmail.com</h4>
                             </li>
-
-                      
-
                           </ul>
+                        </div>
+                        <div class="tab-pane" id="ci">
+                        <div  class="wrapper-lg">
+                         <h4 class="m-t-none"><strong>Edit / Update Enquiry</strong></h4><br>
+
+                
+                 <form role="form">
+                                                
+                        <div class="form-group w-50">
+                        
+                         <select name="account" class="form-control m-b">
+                          <option>Enquiry type</option>
+                          <option>New Admission</option>
+                          <option>Maintenance</option>
+                          <option>Medial</option>
+                          <option>Surgery</option>
+                          <option>Hospital</option>
+                          <option>Family</option>
+                          <option>General</option>
+                        </select>
+                        </div>
+                        <div class="form-group w-50">
+                        
+                          <input class="input-sm input-s datepicker-input form-control" size="16" type="text" value="Date of Enquiry" data-date-format="dd-mm-yyyy" >
+                        </div>
+                        <div class="form-group w-40">
+                        
+                         <select name="account" class="form-control m-b">
+                          <option>Select enquiry mode</option>
+                          <option>Telephone</option>
+                          <option>Email</option>
+                          <option>Walk in</option>
+                          <option>Referral</option>
+                        </select>
+                        </div>
+                        <div class="form-group w-60">
+                        
+                          <input type="text" class="form-control" placeholder="First Name">
+                        </div>
+                        <div class="form-group w-60">
+                        
+                          <input type="text" class="form-control" placeholder="Surname">
+                        </div>
+                        <div class="form-group w-50">
+                        
+                          <input type="text" class="form-control" placeholder="Telephone Number">
+                        </div>
+                        <div class="form-group w-50">
+                        
+                          <input type="text" class="form-control" placeholder="Mobile Number">
+                        </div>
+                        <div class="form-group w-50">
+                        
+                          <input type="email" class="form-control" placeholder="Email Address">
+                        </div>
+                       
+                        <div class="form-group w-60">
+                        
+                          <input type="text" class="form-control" placeholder="Enquiry Taken By">
+                        </div>
+                       <div class="form-group w-60">
+                         <textarea rows="10" class="form-control" placeholder="Notes"></textarea>
+                        </div> 
+                       <div class="form-group w-90">
+                        
+                          <div class="radio">Enquiry Status: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Waiting
+                          </label>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Successful
+                          </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                          <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Rejected
+                          </label>
+                          </div>
+                        </div>
+                          <div class="form-group w-50">
+                        
+                         <select name="account" class="form-control m-b">
+                          <option>How did you find us</option>
+                          <option>Reco</option>
+                          <option>Web / Internet</option>
+                          <option>Telephone Call</option>
+                          <option>News Paper</option>
+                          <option>Others</option>
+                        </select>
+                        </div>
+                          <button type="submit" class="btn btn-primary">Update Information</button>
+                      </form>
+                      </div>
+                        </div>
+                        <div class="tab-pane" id="nki">
+                         <div class="wrapper-lg">
+                         <h4 class="m-t-none"><strong>Previously Made Enquiries</strong></h4><br>
+                          <article class="media">
+                        
+                        <div class="media-body">
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h4">Mar 02, 2015</strong><br>
+                            
+                          </div>
+                          <a href="view-enquiry.html" class="h4">Robert J. R - 001248</a><small class="block"><a href="#" class="">Status</a> <span class="label label-success">Accepted</span></small>
+                          <small class="block m-t-sm">Notes, or summaries enquiry will go here...</small>
+                        </div>
+                      </article>
+                      <div class="line pull-in"></div>
+                      <article class="media">
+                        <div class="media-body">
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h4">Feb 19, 2015</strong><br>
+                            
+                          </div>
+                          <a href="view-enquiry.html" class="h4">Christina Jhones - 0034054</a><small class="block"><a href="#" class="">Status</a> <span class="label label-warning">Waiting</span></small>
+                          <small class="block m-t-sm">Notes, or summaries enquiry will go here....</small>
+                        </div>
+                      </article>
+                      <div class="line pull-in"></div>
+                      <article class="media">
+                        <div class="media-body">
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h4">Jan 05, 2015</strong><br>
+                            
+                          </div>
+                          <a href="view-enquiry.html" class="h4">Micheal Jordan - 3571147</a><small class="block"><a href="#" class="">Status</a> <span class="label label-success">Accepted</span></small>
+                          <small class="block m-t-sm">Notes, or summaries enquiry will go here....</small>
+                        </div>
+                      </article>
+                      <div class="line pull-in"></div>
+                      <article class="media">
+                        <div class="media-body">
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h4">Nov 23, 2014</strong><br>
+                            
+                          </div>
+                          <a href="view-enquiry.html" class="h4">Micheal Clark - 7846147</a><small class="block"><a href="#" class="">Status</a> <span class="label label-success">Accepted</span></small>
+                          <small class="block m-t-sm">Notes, or summaries enquiry will go here....</small>
+                        </div>
+                      </article>
+                      <div class="line pull-in"></div>
+                      <article class="media">
+                        <div class="media-body">
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h4">Nov 11, 2014</strong><br>
+                            
+                          </div>
+                          <a href="view-enquiry.html" class="h4">Norman Brandy - 9871435</a><small class="block"><a href="#" class="">Status</a> <span class="label label-danger">Rejected</span></small>
+                          <small class="block m-t-sm">Notes, or summaries enquiry will go here....</small>
+                        </div>
+                      </article>
+                      <div class="line pull-in"></div>
+                      <article class="media">
+                        <div class="media-body">
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h4">Sep 10, 2014</strong><br>
+                            
+                          </div>
+                          <a href="view-enquiry.html" class="h4">Micheal Clark - 7846147</a><small class="block"><a href="#" class="">Status</a> <span class="label label-success">Accepted</span></small>
+                          <small class="block m-t-sm">Notes, or summaries enquiry will go here....</small>
+                        </div>
+                      </article>
+                         </div>
                         </div>
                       </div>
                     </section>
@@ -678,5 +833,8 @@
   <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
   
   <script src="js/app.plugin.js"></script>
+  
+  <!-- datepicker -->
+<script src="js/datepicker/bootstrap-datepicker.js"></script>
 </body>
 </html>

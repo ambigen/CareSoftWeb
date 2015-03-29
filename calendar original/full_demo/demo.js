@@ -45,8 +45,7 @@ $(document).ready(function()
 			{start: 8, end: 18, limitDisplay: false}]
 			An object that specifies which hours within the day to render as
 		*/
-		businessHours :{start: 00, end: 24, limitDisplay: false },
-		
+		businessHours :{start: 8, end: 18, limitDisplay: true },
 		/*
 			[integer | default: 7]
 			Determines how many days to show.
@@ -73,9 +72,9 @@ $(document).ready(function()
 		{
 			if (calEvent.end.getTime() < new Date().getTime())
 			{
-				$event.css("backgroundColor", "lightSeaGreen ");
+				$event.css("backgroundColor", "#aaa");
 				$event.find(".wc-time").css({
-					"backgroundColor" : "#222",
+					"backgroundColor" : "#999",
 					"border" : "1px solid #888"
 				});
 			}
@@ -126,7 +125,7 @@ $(document).ready(function()
 				},
 				buttons:
 				{
-					Save : function()
+					save : function()
 					{
 						calEvent.id = id;
 						id++;
@@ -139,7 +138,7 @@ $(document).ready(function()
 						$calendar.weekCalendar("updateEvent", calEvent);
 						$dialogContent.dialog("close");
 					},
-					Cancel : function()
+					cancel : function()
 					{
 						$dialogContent.dialog("close");
 					}
@@ -181,7 +180,7 @@ $(document).ready(function()
 				},
 				buttons:
 				{
-					Save : function()
+					save : function()
 					{
 						calEvent.start = new Date(startField.val());
 						calEvent.end = new Date(endField.val());
@@ -191,12 +190,12 @@ $(document).ready(function()
 						$calendar.weekCalendar("updateEvent", calEvent);
 						$dialogContent.dialog("close");
 					},
-					"Delete" : function()
+					"delete" : function()
 					{
 						$calendar.weekCalendar("removeEvent", calEvent.id);
 						$dialogContent.dialog("close");
 					},
-					Cancel : function()
+					cancel : function()
 					{
 						$dialogContent.dialog("close");
 					}
